@@ -1,0 +1,81 @@
+{
+    "dataset": "mnist",
+    "batch_size": 64,
+    "test_batch_size": 1000,
+    "epochs": 14,
+    "no_cuda": false,
+    "seed": 1,
+    "gamma": 0.7,
+    "log_interval": 10,
+
+    "tasks": [
+        {
+            "name": "SGD",
+            "optimizer": "SGD",
+            "args": {
+                "lr": 1e-6,
+                "momentum": 1
+            }
+        },
+        {
+            "name": "DPSGD(0)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPSGD(0.01)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.01,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPSGD(0.03)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.03,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPSGD(0.05)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.05,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPSGD(0.07)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.07,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPSGD(0.10)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.1,
+                "norm_bound": 1.5
+            }
+        }
+    ]
+}

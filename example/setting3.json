@@ -1,0 +1,66 @@
+{
+    "dataset": "mnist",
+    "batch_size": 64,
+    "test_batch_size": 1000,
+    "epochs": 14,
+    "no_cuda": false,
+    "seed": 1,
+    "gamma": 0.7,
+    "log_interval": 10,
+
+    "tasks": [
+        {
+            "name": "Adam",
+            "optimizer": "Adam",
+            "args": {}
+        },
+        {
+            "name": "DPAdam(0)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPAdam(0.01)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0.01,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPAdam(0.03)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0.03,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPAdam(0.05)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0.05,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPAdam(0.07)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0.07,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "DPAdam(0.10)",
+            "optimizer": "DPAdam",
+            "args": {
+                "noise_scale": 0.10,
+                "norm_bound": 1.5
+            }
+        }
+    ]
+}

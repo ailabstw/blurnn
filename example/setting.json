@@ -1,0 +1,59 @@
+{
+    "dataset": "mnist",
+    "batch_size": 64,
+    "test_batch_size": 1000,
+    "epochs": 14,
+    "no_cuda": false,
+    "seed": 1,
+    "gamma": 0.7,
+    "log_interval": 10,
+
+    "tasks": [
+        {
+            "name": "Adadelta",
+            "optimizer": "Adadelta",
+            "args": {
+                "lr": 1
+            }
+        },
+        {
+            "name": "Adagrad",
+            "optimizer": "Adagrad",
+            "args": {
+                "lr": 1
+            }
+        },
+        {
+            "name": "Adam",
+            "optimizer": "Adam",
+            "args": {
+                "lr": 1
+            }
+        },
+        {
+            "name": "AdamW",
+            "optimizer": "AdamW",
+            "args": {
+                "lr": 1
+            }
+        },
+        {
+            "name": "DPSGD(0.01)",
+            "optimizer": "DPSGD",
+            "args": {
+                "lr": 1e-4,
+                "momentum": 1,
+                "noise_scale": 0.01,
+                "norm_bound": 1.5
+            }
+        },
+        {
+            "name": "SGD",
+            "optimizer": "SGD",
+            "args": {
+                "lr": 1e-6,
+                "momentum": 1
+            }
+        }
+    ]
+}
